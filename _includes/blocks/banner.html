@@ -1,0 +1,37 @@
+<section id="section-{{forloop.index}}" class="relative">
+  <img class="absolute inset-0 w-full h-full object-cover" src="{{block.image}}" alt="{{block.image-alt-text}}">
+  <div class="relative max-width mx-auto">
+    <div class="flex content-mover">
+      <div class="content-block">{{block.text_html}}</div>
+    </div>  
+  </div>
+</section>
+
+<style>
+#section-{{forloop.index}} .content-mover{
+  min-height: {{block.height}};
+  justify-content: {{block.horizontal-alignment}};
+  align-items: {{block.vertical-alignment}};
+}
+
+.content-block {
+  width: {{block.column-width}};
+  text-align: {{block.text-alignment}};
+}
+
+
+</style>
+
+{%comment%}
+
+- id: banner
+  text_html: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  height: 100vh
+  horizontal-alignment: center
+  vertical-alignment: center
+  text-alignment: center
+  column-width: 33%
+  image: https://picsum.photos/id/1025/600/400
+  image-alt-text: stock-photo
+
+{%endcomment%}

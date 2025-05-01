@@ -1,0 +1,34 @@
+<section id="section-{{forloop.index}}" class="">
+  <div class="max-width mx-auto">
+    <div class="flex content-mover">
+      <div class="content-block">{{block.text_html}}</div>
+    </div>  
+  </div>
+</section>
+
+<style>
+#section-{{forloop.index}} .content-mover{
+  min-height: {{block.height}};
+  justify-content: {{block.horizontal_alignment}};
+  align-items: {{block.vertical_alignment}};
+}
+
+.content-block {
+  width: {{block.column_width}};
+  text-align: {{block.text_alignment}};
+}
+
+
+</style>
+
+{%comment%}
+
+- id: rich_text_block
+  text_html: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  height: 100vh
+  horizontal_alignment: center
+  vertical_alignment: center
+  text_alignment: center
+  column_width: 33%
+
+{%endcomment%}
