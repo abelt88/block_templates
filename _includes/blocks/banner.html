@@ -1,5 +1,8 @@
 <section id="section-{{forloop.index}}" class="relative">
   <img class="absolute inset-0 w-full h-full object-cover" src="{{block.image}}" alt="{{block.image-alt-text}}">
+  {% unless block.overlay.opacity == 0 %}
+  <div class="absolute inset-0 w-full h-full overlay"></div>
+  {% endunless %}
   <div class="relative max-width mx-auto">
     <div class="flex content-mover">
       <div class="content-block">{{block.text_html}}</div>
@@ -19,6 +22,12 @@
   text-align: {{block.text-alignment}};
 }
 
+#section-{{forloop.index}} .overlay {
+  background-color: {{block.overlay.color}};
+  opacity: {{block.overlay.opacity}};
+  ;
+}
+
 
 </style>
 
@@ -33,5 +42,8 @@
   column-width: 33%
   image: https://picsum.photos/id/1025/600/400
   image-alt-text: stock-photo
+  overlay:
+    color: "#272"
+    opacity: 0.4
 
 {%endcomment%}
