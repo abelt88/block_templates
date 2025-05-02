@@ -1,0 +1,12 @@
+<section class="container mx-auto px-8 text-center my-10">
+  <div class="max-w-4xl mx-auto my-10">
+      <h1 class="text-5xl lg:text-7xl uppercase font-extrabold tracking-widest fancy-font">{{block.heading}}</h1>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+    <!-- Gallery Photo Loop -->
+    {% for item in block.photos %}
+    <img class="aspect-square w-full object-cover object-{{item.image-focus}}" src="{{item.image}}" alt="{{item.image-alt-text}}">
+    {% endfor%}
+
+  </div>
+</section>
