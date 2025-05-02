@@ -1,4 +1,4 @@
-<section id="section-{{forloop.index}}" class="">
+<section id="section-{{forloop.index}}" class="filterable-gallery">
   <div class="max-width mx-auto">
 
     <div class="">
@@ -28,37 +28,6 @@
   </div>
 </section>
 
-<script>
-
-const filterButtons = document.querySelectorAll ('.filter-button')
-const gridItems = document.querySelectorAll ('.grid-items')
-
-console.log(filterButtons, gridItems)
-
-function filterGallery() {
-  let target = this.innerHTML
-  filterButtons.forEach(button => {
-  button.classList.remove('active')
-});
-
-this.classList.add('active')
-
-  gridItems.forEach(image => {
-    if(image.classList.contains(target)) 
-    {
-      image.classList.remove('hidden')
-    } else {
-      image.classList.add('hidden')
-    }
-  })
-}
-
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', filterGallery)
-});
-
-</script>
 
 <style>
 

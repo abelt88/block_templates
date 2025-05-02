@@ -18,6 +18,57 @@
     {% endfor %}
 
     {{content}}
+
+    
+    {% for block in page.blocks %}
+    {% if block.id == "filterable_grid" %}
+    {% assign has-filterable-gallery = true %}
+    {% endif %}
+    {% endfor %}
+    <script>
+    
+        {% if has-filterable-gallery %}
+    // Filterable Gallery Script Below
+      const gallery = document.querySelectorAll('.filterable-gallery')
+    
+    gallery.forEach(section => {
+      
+    
+      const filterButtons = section.querySelectorAll('.filter-button')
+    
+      const gridItems = section.querySelectorAll('.grid-items')
+    
+      console.log(filterButtons,gridItems)
+    
+      function filterGallery() {
+    
+      filterButtons.forEach(button => {
+        button.classList.remove('active')
+      });
+    
+      this.classList.add('active')
+    
+      let target = this.innerHTML
+    
+        gridItems.forEach(image => {
+          if (image.classList.contains(target)){
+            image.classList.remove('hidden')
+          }
+          else { 
+            image.classList.add('hidden')
+          }
+        } )
+      }
+    
+      filterButtons.forEach(button => {
+        button.addEventListener('click', filterGallery)
+      });
+    
+    });
+    
+    {% endif %}
+    </script>
+
 </body>
 
 </html>
