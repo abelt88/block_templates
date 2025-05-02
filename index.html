@@ -46,6 +46,24 @@ blocks:
       answer_html: <p>Answer here for question 2.</p>
     - text: Question 3
       answer_html: <p>Answer here for question 3.</p> 
+- id: filterable_grid
+  filter-buttons:
+    - filter: Condition1
+    - filter: Condition2
+    - filter: Condition3
+  grid:
+    - image: https://picsum.photos/id/1020/600/400
+      image-alt-text: stock-photo
+      filter: Condition1 Condition2
+    - image: https://picsum.photos/id/318/600/400
+      image-alt-text: stock-photo
+      filter: Condition2
+    - image: https://picsum.photos/id/598/600/400
+      image-alt-text: stock-photo
+      filter: Condition3
+
+
 
 ---
 <h1 class="text-4xl font-bold text-green-900">Welcome to your homepage!</h1>
+
