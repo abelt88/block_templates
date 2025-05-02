@@ -2,6 +2,8 @@
   <div class="max-width mx-auto">
 
     <div class="">
+      <div class="filter-button active">All</div>
+      
       {% for button in block.filter-buttons %}
 
       <div class="filter-button">{{button.filter}}</div>
@@ -13,7 +15,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 my-8">
       {% for grid-item in block.grid %}
       
-      <div class="{{grid-item.filter}} grid-items">
+      <div class="All {{grid-item.filter}} grid-items">
         <img class="" src="{{grid-item.image}}" alt="{{grid-item.image-alt-text}}">
       </div>
 
@@ -35,6 +37,12 @@ console.log(filterButtons, gridItems)
 
 function filterGallery() {
   let target = this.innerHTML
+  filterButtons.forEach(button => {
+  button.classList.remove('active')
+});
+
+this.classList.add('active')
+
   gridItems.forEach(image => {
     if(image.classList.contains(target)) 
     {
@@ -51,3 +59,11 @@ filterButtons.forEach(button => {
 });
 
 </script>
+
+<style>
+
+.filter-button.active {
+  color: red;
+}
+
+</style>
