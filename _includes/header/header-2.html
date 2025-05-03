@@ -6,17 +6,17 @@
         {% for link in site.data.navigation.header-links %}
 
         {% if link.sublinks %}
-        <span class="relative">
+        <span class="relative group">
 
         {% endif %}
-        <a href="{{link.url}}" class="p-2">{{link.text}}</a>
+        <a href="{{link.url}}" class="border-red-600 border-2  p-2 ">{{link.text}}</a>
 
 
           {% if link.sublinks %}
-          <div class="absolute top-4 bg-white z-10 left-0">
+          <div class="absolute top-[1.5rem] bg-white z-10 left-0 hidden group-hover:block border-red-600 border-2">
             {% for sublink in link.sublinks %}
 
-            <a href="{{sublink.url}}" class="p-2">{{sublink.text}}</a>
+            <a href="{{sublink.url}}" class="p-2 block whitespace-pre">{{sublink.text}}</a>
 
             {% endfor %}
 

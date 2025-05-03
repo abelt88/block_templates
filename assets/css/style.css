@@ -489,6 +489,12 @@ video {
 .left-0 {
     left: 0px;
 }
+.top-\[2\.2rem\] {
+    top: 2.2rem;
+}
+.top-\[1\.5rem\] {
+    top: 1.5rem;
+}
 .z-10 {
     z-index: 10;
 }
@@ -552,6 +558,9 @@ video {
 }
 .overflow-hidden {
     overflow: hidden;
+}
+.whitespace-pre {
+    white-space: pre;
 }
 .border-2 {
     border-width: 2px;
@@ -667,6 +676,14 @@ section {
 
 .max-width {
     max-width: 1000px;
+}
+
+.hover\:block:hover {
+    display: block;
+}
+
+.group:hover .group-hover\:block {
+    display: block;
 }
 
 @media (min-width: 1024px) {

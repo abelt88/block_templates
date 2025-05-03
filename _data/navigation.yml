@@ -12,3 +12,8 @@ header-links:
     url: /blog
   - text: dan was here
     url: /coolPlace
+    sublinks:
+      - text: Our Mission
+        url: /mission
+      - text: History
+        url: /history
