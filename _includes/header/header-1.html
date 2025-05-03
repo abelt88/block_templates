@@ -1,0 +1,16 @@
+<header class="p-4">
+  <div class="max-width mx-auto">
+    <div class="flex justify-between">
+      <h1>LOGO</h1>
+      <nav>
+        {% for link in site.data.navigation.header-links %}
+
+        <a href="{{link.url}}" class="p-2">{{link.text}}</a>
+
+        {% endfor %}
+
+      
+      </nav>
+    </div>
+  </div>
+</header>
