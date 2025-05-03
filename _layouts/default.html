@@ -9,10 +9,25 @@
     <title>{{page.title}}</title>
 </head>
 
+
 <body>
+
+    <style>
+        :root,{% for scheme in site.data.style.schemes-colors %}
+            .scheme-{{scheme.scheme_name}} {
+                --bg-color: {{scheme.bg-color}};
+                --bg-secondary-color: {{scheme.bg-secondary-color}};
+                --text-color: {{scheme.text-color}};
+                --colored-button-bg: {{scheme.featured-button-color}};
+                --colored-button-text: {{scheme.featured-button-text-color}};
+            }
+        {% endfor %}
+        
+    </style>
+
     {% for block in page.blocks %}
     <!-- {{block.id}} -->
-    <div class="scheme-{{block.scheme}}">
+    <div class="scheme-{{block.scheme-color}}">
         {% include /blocks/{{block.id}}.html %}
     </div>
     {% endfor %}

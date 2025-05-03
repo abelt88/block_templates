@@ -9,6 +9,7 @@ blocks:
   vertical-alignment: center
   text-alignment: center
   column_width: 33%
+  scheme-color: dark
 - id: rich_text_block
   text_html: Lorem ipsum dolor sit amet consectetur adipisicing elit.
   height: 100vh
@@ -16,6 +17,7 @@ blocks:
   vertical-alignment: center
   text-alignment: center
   column-width: 33%
+  scheme-color: base
 - id: banner
   text_html: Lorem ipsum dolor sit amet consectetur adipisicing elit.
   height: 100vh
@@ -46,6 +48,7 @@ blocks:
       answer_html: <p>Answer here for question 2.</p>
     - text: Question 3
       answer_html: <p>Answer here for question 3.</p> 
+  scheme-color: featured
 - id: filterable_grid
   filter-buttons:
     - filter: Condition1
@@ -61,6 +64,30 @@ blocks:
     - image: https://picsum.photos/id/598/600/400
       image-alt-text: stock-photo
       filter: Condition3
+- id: filterable-menu
+  filter-buttons:
+    - filter: Vegetarian
+    - filter: Gluten Free
+    - filter: Pescatarian
+  menu:
+    - dish-name: Truffle Pasta
+      price: $50
+      dish-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque saepe, eos blanditiis fugiat optio perspiciatis maxime, exercitationem ducimus distinctio maiores incidunt explicabo in officia, architecto rem dolor voluptatibus consectetur aliquid?
+      filter: Vegetarian
+- id: form
+  inputs:
+    - name: Name
+      placeholder-text: text
+      type: text
+    - name: email
+      type: email
+    - name: phone
+      type: phone
+    - name: Name
+      type: textarea
+  scheme-color: dark
+
+
 
 
 

@@ -1,0 +1,49 @@
+schemes-colors:
+  - scheme_name: base
+    bg-color: '#ffffff'
+    bg-secondary-color: '#f2ede1'
+    text-color: '#1d1d1b'
+    featured-button-color: '#1d1d1b'
+    featured-button-text-color: '#ffffff'
+  - scheme_name: dark
+    bg-color: '#1d1d1b'
+    bg-secondary-color: '#2d2d2b'
+    text-color: '#ffffff'
+    featured-button-color: '#ffffff'
+    featured-button-text-color: '#1d1d1b'
+  - scheme_name: featured
+    bg-color: '#f2ede1'
+    bg-secondary-color: '#ffffff'
+    text-color: '#000'
+    featured-button-color: '#000'
+    featured-button-text-color: '#fff'
+  - scheme_name: footer
+    bg-color: '#1d1d1b'
+    bg-secondary-color: '#2d2d2b'
+    text-color: '#ffffff'
+    featured-button-color: '#ffffff'
+    featured-button-text-color: '#1d1d1b'
+schemes-padding:
+  - scheme_name: small-padding
+    padding: 5%
+  - scheme_name: no-padding
+    padding: 0%
+  - scheme_name: medium-padding
+    padding: 7%
+  - scheme_name: large-padding
+    padding: 10%
+schemes-max-width:
+  - scheme_name: full-width
+    max-width: 100%
+  - scheme_name: XL
+    max-width: 1600px
+  - scheme_name: L
+    max-width: 1280px
+  - scheme_name: M
+    max-width: 1024px
+  - scheme_name: S
+    max-width: 768px
+animation-speed: .4s
+small-padding: 1rem
+vertical-padding: min(5vw , 4rem)
+horizontal-padding: min(5vw , 4rem)

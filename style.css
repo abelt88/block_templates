@@ -12,6 +12,12 @@
 
 section {
     padding: 5%;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn-colored{
+
 }
 
 .max-width {

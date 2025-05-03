@@ -7,7 +7,27 @@ module.exports = {
     './*.{html,js,md}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'bg-color': 'var(--bg-color)',
+        cream: 'var(--cream)',
+        olive: 'var(--olive)',
+        herb: 'var(--herb)',
+        sand: 'var(--sand)',
+        forest: 'var(--forest)',
+        background: 'var(--background)',
+        pen: 'var(--pen)',
+        outline: 'var(--outline)',
+        "button-color": 'var(--button-color)',
+        "button-text": 'var(--button-text)',
+        "hover-button-color": 'var(--hover-button-color)',
+      },
+      fontFamily: {
+        body: ["Montserrat", "sans-serif"],
+        heading: ["Italiana", "serif"],
+        
+      }
+    },
   },
   plugins: [],
 }
