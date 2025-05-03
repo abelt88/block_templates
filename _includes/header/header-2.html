@@ -1,0 +1,34 @@
+<header class="p-4">
+  <div class="max-width mx-auto">
+    <div class="flex justify-between">
+      <h1>LOGO</h1>
+      <nav>
+        {% for link in site.data.navigation.header-links %}
+
+        {% if link.sublinks %}
+        <span class="relative">
+
+        {% endif %}
+        <a href="{{link.url}}" class="p-2">{{link.text}}</a>
+
+
+          {% if link.sublinks %}
+          <div class="absolute top-4 bg-white z-10 left-0">
+            {% for sublink in link.sublinks %}
+
+            <a href="{{sublink.url}}" class="p-2">{{sublink.text}}</a>
+
+            {% endfor %}
+
+          </div>
+        </span>
+
+          {% endif %}
+
+        {% endfor %}
+
+      
+      </nav>
+    </div>
+  </div>
+</header>

@@ -3,6 +3,11 @@ header-links:
     url: /
   - text: About
     url: /about
+    sublinks:
+      - text: Our Mission
+        url: /mission
+      - text: History
+        url: /history
   - text: Blog
     url: /blog
   - text: dan was here
