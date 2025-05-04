@@ -110,7 +110,7 @@
     --tw-contain-paint:  ;
     --tw-contain-style:  ;
 }
-/* ! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -465,6 +465,9 @@ video {
         max-width: 1536px;
     }
 }
+.fixed {
+    position: fixed;
+}
 .absolute {
     position: absolute;
 }
@@ -474,6 +477,9 @@ video {
 .inset-0 {
     inset: 0px;
 }
+.left-0 {
+    left: 0px;
+}
 .right-0 {
     right: 0px;
 }
@@ -482,15 +488,6 @@ video {
 }
 .top-\[1\.4px\] {
     top: 1.4px;
-}
-.top-4 {
-    top: 1rem;
-}
-.left-0 {
-    left: 0px;
-}
-.top-\[2\.2rem\] {
-    top: 2.2rem;
 }
 .top-\[1\.5rem\] {
     top: 1.5rem;
@@ -512,6 +509,9 @@ video {
 }
 .block {
     display: block;
+}
+.inline {
+    display: inline;
 }
 .flex {
     display: flex;
@@ -562,6 +562,9 @@ video {
 .whitespace-pre {
     white-space: pre;
 }
+.border {
+    border-width: 1px;
+}
 .border-2 {
     border-width: 2px;
 }
@@ -577,30 +580,23 @@ video {
 .border-t-2 {
     border-top-width: 2px;
 }
-.border-black {
-    --tw-border-opacity: 1;
-    border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-.border-cream {
-    border-color: var(--cream);
-}
 .border-red-600 {
     --tw-border-opacity: 1;
-    border-color: rgb(220 38 38 / var(--tw-border-opacity));
+    border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
 }
 .bg-white {
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 .object-cover {
     -o-object-fit: cover;
        object-fit: cover;
 }
-.p-4 {
-    padding: 1rem;
-}
 .p-2 {
     padding: 0.5rem;
+}
+.p-4 {
+    padding: 1rem;
 }
 .px-0 {
     padding-left: 0px;
@@ -638,7 +634,7 @@ video {
 }
 .text-green-900 {
     --tw-text-opacity: 1;
-    color: rgb(20 83 45 / var(--tw-text-opacity));
+    color: rgb(20 83 45 / var(--tw-text-opacity, 1));
 }
 .outline {
     outline-style: solid;
@@ -674,12 +670,12 @@ section {
 
 }
 
-.max-width {
-    max-width: 1000px;
+.border-color {
+    border-color: var(--border-color)
 }
 
-.hover\:block:hover {
-    display: block;
+.max-width {
+    max-width: 1000px;
 }
 
 .group:hover .group-hover\:block {

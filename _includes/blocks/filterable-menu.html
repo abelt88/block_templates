@@ -16,9 +16,19 @@
       
       {% for menu-item in block.menu %}
       
-      <div class="All {{menu-item.filter}} menu-items">
+      <div class="All  {{menu-item.filter }} menu-items grid-items">
         <div>
-          <p>{{menu-item.dish-name}}</p>
+          <p>{{menu-item.dish-name}}
+
+            {% for icon in block.filter-buttons %}
+            {% assign spaceremovefilter = icon.filter | replace: ' ','-' %}
+            {% if menu-item.filter contains spaceremovefilter%}
+            {{icon.icon}}
+            {% endif %}
+
+            {% endfor %}
+
+          </p>
         </div>
         <div>
           <p>{{menu-item.price}}</p>
@@ -43,6 +53,11 @@
 
 .filter-button.active {
   color: red;
+}
+
+.menu-items svg {
+  display: inline;
+  width: 1rem;
 }
 
 </style>

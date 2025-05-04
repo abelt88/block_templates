@@ -20,6 +20,10 @@ section {
 
 }
 
+.border-color {
+    border-color: var(--border-color)
+}
+
 .max-width {
     max-width: 1000px;
 }

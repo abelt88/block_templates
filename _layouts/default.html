@@ -25,6 +25,12 @@
       <meta name="robots" content="none">
     {% endif %}
 
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+				
+
 </head>
 
 
@@ -38,12 +44,14 @@
                 --text-color: {{scheme.text-color}};
                 --colored-button-bg: {{scheme.featured-button-color}};
                 --colored-button-text: {{scheme.featured-button-text-color}};
+                --border-color: {{scheme.border-color}}
             }
         {% endfor %}
         
     </style>
 
     {% include /header/header-2.html %}
+
 
     {% for block in page.blocks %}
     <!-- {{block.id}} -->
@@ -60,49 +68,27 @@
     {% assign has-filterable-gallery = true %}
     {% endif %}
     {% endfor %}
-    <script>
-    
-        {% if has-filterable-gallery %}
-    // Filterable Gallery Script Below
-      const gallery = document.querySelectorAll('.filterable-gallery')
-    
-    gallery.forEach(section => {
-      
-    
-      const filterButtons = section.querySelectorAll('.filter-button')
-    
-      const gridItems = section.querySelectorAll('.grid-items')
-    
-      console.log(filterButtons,gridItems)
-    
-      function filterGallery() {
-    
-      filterButtons.forEach(button => {
-        button.classList.remove('active')
-      });
-    
-      this.classList.add('active')
-    
-      let target = this.innerHTML
-    
-        gridItems.forEach(image => {
-          if (image.classList.contains(target)){
-            image.classList.remove('hidden')
-          }
-          else { 
-            image.classList.add('hidden')
-          }
-        } )
-      }
-    
-      filterButtons.forEach(button => {
-        button.addEventListener('click', filterGallery)
-      });
-    
-    });
-    
+  
+
+  <!-- JavaScript Coding -->
+  <script>
+
+    {% include /JavaScript/responsive-display-slider.js %}
+
+    {% if has-filterable-gallery %}
+      {% include /JavaScript/filterable-gallery.js %}
     {% endif %}
+
+
     </script>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<!------ Cookie Banner Below ------>
+{% include /compliance/cookie-banner.html %}
 
 </body>
 

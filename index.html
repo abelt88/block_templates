@@ -41,6 +41,7 @@ blocks:
     text-size:
     banner-speed: 50
 - id: faq
+  header: Frequently Asked Questions
   questions:
     - text: Question 1
       answer_html: <p>Answer here for question 1.</p>
@@ -67,13 +68,27 @@ blocks:
 - id: filterable-menu
   filter-buttons:
     - filter: Vegetarian
+      icon: >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M346.7 6C337.6 17 320 42.3 320 72c0 40 15.3 55.3 40 80s40 40 80 40c29.7 0 55-17.6 66-26.7c4-3.3 6-8.2 6-13.3s-2-10-6-13.2c-11.4-9.1-38.3-26.8-74-26.8c-32 0-40 8-40 8s8-8 8-40c0-35.7-17.7-62.6-26.8-74C370 2 365.1 0 360 0s-10 2-13.3 6zM244.6 136c-40 0-77.1 18.1-101.7 48.2l60.5 60.5c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-55.3-55.3 0 .1L2.2 477.9C-2 487-.1 497.8 7 505s17.9 9 27.1 4.8l134.7-62.4-52.1-52.1c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L199.7 433l100.2-46.4c46.4-21.5 76.2-68 76.2-119.2C376 194.8 317.2 136 244.6 136z"/></svg>
     - filter: Gluten Free
+      icon: >
+        <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1125.628 1125.628" xml:space="preserve">
+        <g>
+          <path d="M562.812,0.002C252.476,0.002,0,252.478,0,562.814s252.476,562.812,562.812,562.812   c310.34,0,562.816-252.476,562.816-562.812S873.152,0.002,562.812,0.002z M549.519,701.492c-14,15.033-28.964,28.403-52.992,40.11   c-24.032,11.711-54.35,17.564-91.051,17.564c-46.662,0-85.943-14.504-115.476-43.517c-29.537-29.009-45.481-66.672-45.481-112.986   v-79.694c0-46.139,15.398-83.758,43.801-112.856c28.398-29.099,65.568-43.648,110.311-43.648   c46.487,0,82.395,11.318,107.126,33.948c24.729,22.635,37.507,52.898,38.031,89.77l-0.374,2.081h-72.092   c-1.401-22-7.864-36.816-19.399-48.613c-11.534-11.796-28.402-17.949-50.594-17.949c-23.422,0-41.642,8.909-55.969,26.981   c-14.332,18.073-20.841,41.207-20.841,69.667v80.144c0,28.984,6.77,52.512,21.627,70.585   c14.853,18.072,34.539,27.104,59.705,27.104c17.826,0,32.671-1.827,43.51-5.489c10.834-3.658,16.159-8.188,25.159-13.591v-69.838   h-71v-53h146V701.492z M880.519,430.263h-190v106h163v57h-163v159h-75v-379h265V430.263z"/>
+        </g>
+        </svg>
     - filter: Pescatarian
+      icon: >
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M180.5 141.5C219.7 108.5 272.6 80 336 80s116.3 28.5 155.5 61.5c39.1 33 66.9 72.4 81 99.8c4.7 9.2 4.7 20.1 0 29.3c-14.1 27.4-41.9 66.8-81 99.8C452.3 403.5 399.4 432 336 432s-116.3-28.5-155.5-61.5c-16.2-13.7-30.5-28.5-42.7-43.1L48.1 379.6c-12.5 7.3-28.4 5.3-38.7-4.9S-3 348.7 4.2 336.1L50 256 4.2 175.9c-7.2-12.6-5-28.4 5.3-38.6s26.1-12.2 38.7-4.9l89.7 52.3c12.2-14.6 26.5-29.4 42.7-43.1zM448 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
   menu:
     - dish-name: Truffle Pasta
       price: $50
       dish-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque saepe, eos blanditiis fugiat optio perspiciatis maxime, exercitationem ducimus distinctio maiores incidunt explicabo in officia, architecto rem dolor voluptatibus consectetur aliquid?
-      filter: Vegetarian
+      filter:  Vegetarian Vegan Pescatarian Gluten-Free
+    - dish-name: Truffle Fish
+      price: $50
+      dish-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque saepe, eos blanditiis fugiat optio perspiciatis maxime, exercitationem ducimus distinctio maiores incidunt explicabo in officia, architecto rem dolor voluptatibus consectetur aliquid?
+      filter: Pescatarian 
 - id: form
   inputs:
     - name: Name
@@ -87,7 +102,12 @@ blocks:
       type: textarea
   scheme-color: dark
 
-
+seo:
+  title: page seo title
+  description: specific page description
+  image:
+  favicon:
+  index: true 
 
 
 

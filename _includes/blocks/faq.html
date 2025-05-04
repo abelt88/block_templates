@@ -1,18 +1,20 @@
 <section id="section-{{forloop.index}}" class="">
   <div class="max-width mx-auto">
 
+    <h2>{{block.header}}</h2>
+
     {% for question in block.questions %}
 
-    <div class="questions border-cream border-2 {% if forloop.first%} border-t-2 {% else %}border-t-0 {% endif %} border-b-0 p-4">
+    <div class="questions border-color border-2 {% if forloop.first%} border-t-2 {% else %}border-t-0 {% endif %} border-b-0 p-4">
       <h3 class="relative">{{question.text}}
         <div class="faq-question-icon absolute top-2 right-0">
-          <span class="border-b border-black w-4 block rotate-90 transition-all duration-1000 leading-none relative top-[1.4px]"></span>
-          <span class="border-b border-black w-4 block leading-none"></span>
+          <span class="border-b border-color w-4 block rotate-90 transition-all duration-1000 leading-none relative top-[1.4px]"></span>
+          <span class="border-b border-color w-4 block leading-none"></span>
         </div>
       </h3>
     </div>
 
-    <div class="answers overflow-hidden border-red-600 border-2 border-t-0 transition-all duration-1000" style="max-height: 0;">
+    <div class="answers overflow-hidden border-color border-2 border-t-0 transition-all duration-1000" style="max-height: 0;">
       <div class="answer-content">
         <h3 class="">{{question.answer_html}}</h3>
       </div>

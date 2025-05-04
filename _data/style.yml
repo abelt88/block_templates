@@ -5,24 +5,28 @@ schemes-colors:
     text-color: '#1d1d1b'
     featured-button-color: '#1d1d1b'
     featured-button-text-color: '#ffffff'
+    border-color: '#ffffff'
   - scheme_name: dark
     bg-color: '#1d1d1b'
     bg-secondary-color: '#2d2d2b'
     text-color: '#ffffff'
     featured-button-color: '#ffffff'
     featured-button-text-color: '#1d1d1b'
+    border-color: '#ffffff'
   - scheme_name: featured
     bg-color: '#f2ede1'
     bg-secondary-color: '#ffffff'
     text-color: '#000'
     featured-button-color: '#000'
     featured-button-text-color: '#fff'
+    border-color: '#ffffff'
   - scheme_name: footer
     bg-color: '#1d1d1b'
     bg-secondary-color: '#2d2d2b'
     text-color: '#ffffff'
     featured-button-color: '#ffffff'
     featured-button-text-color: '#1d1d1b'
+    border-color: '#ffffff'
 schemes-padding:
   - scheme_name: small-padding
     padding: 5%
