@@ -19,7 +19,7 @@
       this.classList.add('active')
     
       let target = this.innerHTML.replace(' ','-')
-    
+
         gridItems.forEach(image => {
           if (image.classList.contains(target)){
             image.classList.remove('hidden')

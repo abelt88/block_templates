@@ -1,12 +1,12 @@
 <section id="section-{{forloop.index}}" class="filterable-gallery">
   <div class="max-width mx-auto">
 
-    <div class="">
-      <div class="filter-button active">All</div>
+    <div class="flex justify-center">
+      <div class="filter-button active p-4">All</div>
       
       {% for button in block.filter-buttons %}
 
-      <div class="filter-button">{{button.filter}}</div>
+      <div class="filter-button p-4">{{button.filter}}</div>
 
       {% endfor %}
 
@@ -17,7 +17,8 @@
       {% for menu-item in block.menu %}
       
       <div class="All  {{menu-item.filter }} menu-items grid-items">
-        <div>
+        <div class="flex flex-row justify-between border-b border-color ">
+        <div class=" ">
           <p>{{menu-item.dish-name}}
 
             {% for icon in block.filter-buttons %}
@@ -33,10 +34,10 @@
         <div>
           <p>{{menu-item.price}}</p>
         </div>
-
       </div>
-      <div>
-        <p>{{menu-item.dish-description}}</p>
+        <div class="pb-2">
+          <p class="">{{menu-item.dish-description}}</p>
+        </div>
       </div>
 
       {% endfor %}

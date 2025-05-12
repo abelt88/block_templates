@@ -1,7 +1,7 @@
 <section id="section-{{forloop.index}}" class="">
-  <div class="max-width mx-auto">
+  <div class="max-width mx-auto py-8">
 
-    <h2>{{block.header}}</h2>
+    <h2 class="">{{block.header}}</h2>
 
     {% for question in block.questions %}
 
@@ -15,7 +15,7 @@
     </div>
 
     <div class="answers overflow-hidden border-color border-2 border-t-0 transition-all duration-1000" style="max-height: 0;">
-      <div class="answer-content">
+      <div class="answer-content pb-4">
         <h3 class="">{{question.answer_html}}</h3>
       </div>
     </div>
